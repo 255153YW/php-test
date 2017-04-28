@@ -1,6 +1,18 @@
 <?php
-	require 'core/bootstrap.php';
-	session_start();
+/**
+ * Entry point of the application; 
+ */
 
-	require Router::load('routes.php')->direct(Request::uri());
+	//Load stuff from 'core/bootstrap.php'
+	require 'core/bootstrap.php';
+
+	
+	
+	try {
+    //load list of routes from 'routes.php' and direct user to the right controller based on the request uri/method 
+	Router::load('routes.php')->direct(Request::uri(), Request::method());
+	} catch (Exception $e) {
+	    echo 'Caught exception: ',  $e->getMessage(), "\n";
+	}
+	
 ?>
