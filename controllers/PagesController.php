@@ -52,14 +52,14 @@ Class PagesController{
 	public function login(){
 		$title="Login";
 		$page="login";
-		$_SESSION["username"]="john";
+		
 		require 'views/login.view.php';
 	}
 
 	public function logout(){
 		session_unset();
 		session_destroy();
-		$this->home();
+		$this->login();
 	}
 }
 ?>

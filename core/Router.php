@@ -1,5 +1,6 @@
 <?php 
 require 'controllers/PagesController.php';
+require 'controllers/CRUDController.php';
 
 class Router{
 	protected $routes = [
@@ -28,6 +29,7 @@ class Router{
 	}
 
 	public function direct($uri, $method){
+		// $uri = str_replace("php-test", "", $uri);
 		if(isset($this->routes[$method]) && array_key_exists($uri, $this->routes[$method])){
 			$temp = explode('@', $this->routes[$method][$uri]);
 			return $this->callAction($temp[0], $temp[1]);

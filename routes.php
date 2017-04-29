@@ -28,10 +28,9 @@ $router->post('update/overtime', 'CRUDController@updateOvertime');
 
 $router->post('delete/overtime', 'CRUDController@deleteOvertime');
 
+$router->post('update/self', 'CRUDController@updateProfile');
 
-$router->post('update/self', 'update-profile.php');
-
-$router->get('add/employee', 'add-employee.php');
+$router->post('add/employee', 'CRUDController@addEmployee');
 
 $router->post('add/employee', 'add-employee.php');
 
