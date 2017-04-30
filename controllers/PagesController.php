@@ -1,4 +1,9 @@
 <?php
+/**
+* Basic controller class used on this project
+* Check session on constructor
+* Used mainly to display static page
+**/
 Class PagesController{
 
 	function __construct(){

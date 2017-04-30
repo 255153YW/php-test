@@ -1,4 +1,7 @@
 <?php
+/**
+* Convenience function to get certain part of the request uri
+**/
 class Request{
 	public static function uri(){
 		return trim($_SERVER['REQUEST_URI'],'/');

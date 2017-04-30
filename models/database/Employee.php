@@ -1,4 +1,7 @@
 <?php
+/**
+* Simple class used to represent the employee tables from the database
+**/
 Class Employee{
 	public $id;
 	public $firstname;

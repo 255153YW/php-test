@@ -1,4 +1,8 @@
 <?php
+/**
+* Builds and executes query for CRUDController
+* The employee specific function should be refactored later when more table is added in the database
+**/
 require 'models/database/Employee.php';
 
 class QueryBuilder{

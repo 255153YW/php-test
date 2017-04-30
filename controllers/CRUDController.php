@@ -1,4 +1,9 @@
 <?php
+/**
+* Extends PagesController class for pages that needs CRUD operation from the database
+**/
+require 'core/database/Connection.php';
+require 'core/database/QueryBuilder.php';
 
 class CRUDController extends PagesController {
 	private $query;
