@@ -16,6 +16,6 @@
 		  
 		  <button class="btn btn-default btn-warning" type="submit">Login</button>
 		</form>
-      </div>
+     </div>
 
 <?php require('partials/footer.php')?>

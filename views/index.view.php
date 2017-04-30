@@ -9,10 +9,10 @@
 
 			<center>
 				<a href="/employees" class="btn btn-default btn-info input btn-block">List of All Employee</a>
-				<a href="/overtime" class="btn btn-default btn-info btn-block">List of All Overtime Schedule</a>
+				<!-- <a href="/overtime" class="btn btn-default btn-info btn-block">List of All Overtime Schedule</a> -->
 				<?php
 				if ($_SESSION['username'] == "manager") {?>
-				<a href="/add/overtime" class="btn btn-default btn-danger btn-block">Assign Employee's Overtime Schedule</a>
+				<!-- <a href="/add/overtime" class="btn btn-default btn-danger btn-block">Assign Employee's Overtime Schedule</a> -->
 				<a href="/add/employee" class="btn btn-default btn-danger btn-block">Add a New Employee</a>
 				<?php
 				}?>

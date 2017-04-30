@@ -13,29 +13,22 @@ $router->get('login', 'PagesController@login');
 
 $router->get('loggedOut', 'PagesController@logout');
 
-$router->get('employees', 'PagesController@showEmployees');
-
-$router->get('update/self', 'PagesController@showSelfProfile');
-
-$router->get('add/overtime', 'PagesController@showOvertimes');
-
-
 $router->post('login', 'CRUDController@login');
 
-$router->post('add/overtime', 'CRUDController@addOvertime');
+$router->get('employees', 'CRUDController@showEmployees');
 
-$router->post('update/overtime', 'CRUDController@updateOvertime');
+$router->get('update/self', 'CRUDController@showSelfProfile');
 
-$router->post('delete/overtime', 'CRUDController@deleteOvertime');
+$router->get('update/employee', 'CRUDController@showEditEmployee');
 
-$router->post('update/self', 'CRUDController@updateProfile');
+$router->post('update/employee', 'CRUDController@updateEmployee');
+
+$router->get('delete/employee', 'CRUDController@deleteEmployee');
+
+$router->post('update/self', 'CRUDController@updateSelfProfile');
+
+$router->get('add/employee', 'CRUDController@showAddEmployee');
 
 $router->post('add/employee', 'CRUDController@addEmployee');
-
-$router->post('add/employee', 'add-employee.php');
-
-$router->post('update/employee', 'add-employee.php');
-
-$router->post('delete/employee', 'add-employee.php');
 
 ?>

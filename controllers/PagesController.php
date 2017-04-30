@@ -16,6 +16,20 @@ Class PagesController{
 		$_SESSION['LAST_ACTIVITY'] = time(); 
 	}
 
+	public function isValidUserSession(){
+		if($_SESSION["username"]){
+			return true;
+		}
+		return false;
+	}
+
+	public function isValidManagerSession(){
+		if($_SESSION["username"]==='manager'){
+			return true;
+		}
+		return false;
+	}
+
 	public function home(){
 		$title="Home";
 		$page="home";
@@ -32,21 +46,6 @@ Class PagesController{
 		$title="Contact";
 		$page="contact";
 		require 'views/contact.view.php';
-	}
-
-	public function showEmployees(){
-		$title="Employees";
-		require 'views/employees.view.php';
-	}
-
-	public function showOvertimes(){
-		$title="Overtimes";
-		require 'views/overtimes.view.php';
-	}
-
-	public function showSelfProfile(){
-		$title="My Profile";
-		require 'views/profile.view.php';
 	}
 
 	public function login(){
